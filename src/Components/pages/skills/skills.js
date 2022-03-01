@@ -17,7 +17,7 @@ const Skills = () => {
       <BackGround>
       <article>
 		<h3>Social Media</h3>
-		<p>We bring the people of the world together so you can watch them tear each other apart.</p>
+    		<p>We bring the people of the world together so you can watch them tear each other apart.</p>
 	</article>
 	<article>
 		<h3>Foresight</h3>
