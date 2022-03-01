@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { createGlobalStyle } from "styled-components";
+import Navbar from "./Components/navbar/navbar";
+import ApiSpeech from './microservices/apiSpeech';
+import ApiAbout from './microservices/apiAbout';
+import ApiTags from './microservices/apiTags';
+import ApiJobs from './microservices/apiJobs';
+import { BrowserRouter as Router } from 'react-router-dom';
+import MainRoutes from "./routes";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+
+  return <div>
+     <GlobalStyle />
+     <ApiSpeech />
+    <ApiAbout />
+    <ApiTags />
+    <ApiJobs />   
+    <Router>
+       <Navbar />
+          <MainRoutes />
+        </Router>
+  </div>;
+};
+
+const GlobalStyle = createGlobalStyle`
+  body {
+   
+  }
+`;
 
 export default App;
