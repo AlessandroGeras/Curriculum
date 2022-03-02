@@ -2,17 +2,17 @@ import React, { useEffect } from "react";
 import api from "./api";
 import { Buffer } from "buffer";
 import { useDispatch } from "react-redux";
-import { job } from "../Redux/actions/actionsJobs";
+import { course } from "../Redux/actions/actionsCourses";
 
-const ApiJobs = () => {
+const ApiCourses = () => {
     const dispatch = useDispatch();
-    const setjob = (jobArgs, roleArgs,skillsArgs,startArgs,endArgs) => {dispatch(job(jobArgs, roleArgs,skillsArgs,startArgs,endArgs));
+    const setcourse = (coursesArgs, courseArgs,placeArgs) => {dispatch(course(coursesArgs, courseArgs,placeArgs));
     };
 
   useEffect(() => {
     api
       .get(
-        "/repos/AlessandroGeras/AlessandroGeras/contents/Curriculum/jobs.json"
+        "/repos/AlessandroGeras/AlessandroGeras/contents/Curriculum/courses.json"
       )
       .then((response) => {
         let str = response.data.content;
@@ -21,16 +21,12 @@ const ApiJobs = () => {
         var mydata = JSON.parse(base64ToStringNew);
         
         for(let x=0;x<mydata.length;x++){
-            let job = (mydata[x].job);
+            let courses = (mydata[x].courses);
             x++;
-            let role = (mydata[x].role);
+            let course = (mydata[x].course);
             x++;
-            let skills = (mydata[x].skills);
-            x++;
-            let start = (mydata[x].start);
-            x++;
-            let end = (mydata[x].end);
-            setjob(job,role,skills,start,end);
+            let place = (mydata[x].place);
+            setcourse(courses, course,place);
         }
         
        
@@ -43,4 +39,4 @@ const ApiJobs = () => {
   return <div></div>;
 };
 
-export default ApiJobs;
+export default ApiCourses;

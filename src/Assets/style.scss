@@ -1,10 +1,11 @@
 $u: 1.25;
-$d: 14em;
+$w: 15em;
+$h: 16em;
 $p: .5em;
 $o: 1.25em;
-$l: 6px;
+$l: 4px;
 
-*, ::before { box-sizing: inherit; margin: 0 }
+*, ::before { box-sizing: inherit; margin: 0 auto;}
 
 
 
@@ -18,14 +19,50 @@ article {
 	--s1: calc(#{$o} + #{$l} + #{$p});
 	place-self: center;
 	position: relative;
-	width: $d; height: $d;
+    margin-bottom:5%;
+	width: $w; height: $h;
 	border: solid 0 transparent;
 	border-width: 0 var(--s0) var(--s0) 0;
 	padding: var(--s1) $p $p var(--s1);
 	background: var(--c) padding-box;
 	
-	&:nth-child(2) {
+	&.SCRUM,&.PROJETO,&.VISUAL,&.BOOTSTRAP,&.GIT,&.TYPESCRIPT,&.HTML {
 		--c: #{invert(indigo)};
+		filter: invert(1)
+	}
+
+    &.LÓGICA {
+		--c: #{invert(rgb(15, 130, 0))};
+		filter: invert(1)
+	}
+
+    &.NODEJS {
+		--c: #{invert(#AFB42B)};
+		filter: invert(1)
+	}
+
+    &.PROJETO {
+		--c: #{invert(rgb(0, 0, 0))};
+		filter: invert(1)
+	}
+
+    &.API {
+		--c: #{invert(#455EDE)};
+		filter: invert(1)
+	}
+
+    &.REACTJS {
+		--c: #{invert(rgb(130, 0, 0))};
+		filter: invert(1)
+	}
+    
+    &.JAVASCRIPT {
+		--c: #{invert(#502812)};
+		filter: invert(1)
+	}
+
+    &.SQL {
+		--c: #{invert(#004d40)};
 		filter: invert(1)
 	}
 	
@@ -34,7 +71,7 @@ article {
 		top: 0; left: 0;
 		border: inherit;
 		border-width: $o 0 0 $o;
-		width: $d; height: $d;
+		width: $w; height: $h;
 		box-shadow: inset 0 0 0 $l var(--c);
 		mix-blend-mode: difference;
 		pointer-events: none;
@@ -47,3 +84,7 @@ h3 {
 	font-weight: 900;
 	line-height: 1.75
 }
+
+a{position:absolute;
+bottom:0;}
+

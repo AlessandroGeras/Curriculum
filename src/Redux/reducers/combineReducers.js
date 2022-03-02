@@ -3,6 +3,8 @@ import about from "./reducerAbout";
 import tagreducer from "./reducerTags";
 import jobreducer from "./reducerJobs";
 import button from "./reducerButtons";
+import coursereducer from "./reducerCourses";
+import certificationreducer from "./reducerCertifications";
 import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
@@ -10,6 +12,8 @@ const allReducers = combineReducers({
   about,
   tagreducer,
   jobreducer,
-  button
+  button,
+  coursereducer,
+  certificationreducer,
 });
 export default allReducers;

@@ -6,8 +6,8 @@ import { tag } from "../Redux/actions/actionsTags";
 
 const ApiTags = () => {
   const dispatch = useDispatch();
-  const settag = (args, randomstring) => {
-    dispatch(tag(args, randomstring));
+  const settag = (tagArgs, idArgs) => {
+    dispatch(tag(tagArgs, idArgs));
   };
 
   useEffect(() => {

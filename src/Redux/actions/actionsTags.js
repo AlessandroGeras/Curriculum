@@ -1,6 +1,6 @@
-export const tag = (args, randomstring) => {
+export const tag = (tagArgs, idArgs) => {
   return {
     type: "TAG",
-    payload: { tag: args, id: randomstring },
+    payload: { tag: tagArgs, id: idArgs },
   };
 };

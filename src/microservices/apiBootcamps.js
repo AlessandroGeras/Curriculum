@@ -2,17 +2,17 @@ import React, { useEffect } from "react";
 import api from "./api";
 import { Buffer } from "buffer";
 import { useDispatch } from "react-redux";
-import { job } from "../Redux/actions/actionsJobs";
+import { bootcamp } from "../Redux/actions/actionsBootcamps";
 
-const ApiJobs = () => {
+const ApiBootcamps = () => {
     const dispatch = useDispatch();
-    const setjob = (jobArgs, roleArgs,skillsArgs,startArgs,endArgs) => {dispatch(job(jobArgs, roleArgs,skillsArgs,startArgs,endArgs));
+    const setbootcamp = (bootcampArgs, workloadArgs,issuedateArgs) => {dispatch(bootcamp(bootcampArgs, workloadArgs,issuedateArgs));
     };
 
   useEffect(() => {
     api
       .get(
-        "/repos/AlessandroGeras/AlessandroGeras/contents/Curriculum/jobs.json"
+        "/repos/AlessandroGeras/AlessandroGeras/contents/Curriculum/certifications.json"
       )
       .then((response) => {
         let str = response.data.content;
@@ -21,16 +21,14 @@ const ApiJobs = () => {
         var mydata = JSON.parse(base64ToStringNew);
         
         for(let x=0;x<mydata.length;x++){
-            let job = (mydata[x].job);
+            let bootcamp = (mydata[x].bootcamp);
             x++;
-            let role = (mydata[x].role);
+            let workload = (mydata[x].workload);
             x++;
-            let skills = (mydata[x].skills);
+            let issuedate = (mydata[x].issuedate);
             x++;
-            let start = (mydata[x].start);
-            x++;
-            let end = (mydata[x].end);
-            setjob(job,role,skills,start,end);
+            let link = (mydata[x].link);
+            setcertification(bootcampArgs, workloadArgs,issuedateArgs);
         }
         
        
@@ -43,4 +41,4 @@ const ApiJobs = () => {
   return <div></div>;
 };
 
-export default ApiJobs;
+export default ApiBootcamps;
