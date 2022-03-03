@@ -2,17 +2,17 @@ import React, { useEffect } from "react";
 import api from "./api";
 import { Buffer } from "buffer";
 import { useDispatch } from "react-redux";
-import { course } from "../Redux/actions/actionsCourses";
+import { project } from "../Redux/actions/actionsProjects";
 
-const ApiCourses = () => {
+const ApiProjects = () => {
     const dispatch = useDispatch();
-    const setcourse = (coursesArgs, courseArgs,placeArgs,issuedateArgs) => {dispatch(course(coursesArgs, courseArgs,placeArgs,issuedateArgs));
+    const setproject = (projectsArgs, projectArgs,linkArgs) => {dispatch(project(projectsArgs, projectArgs,linkArgs));
     };
 
   useEffect(() => {
     api
       .get(
-        "/repos/AlessandroGeras/AlessandroGeras/contents/Curriculum/courses.json"
+        "/repos/AlessandroGeras/AlessandroGeras/contents/Curriculum/projects.json"
       )
       .then((response) => {
         let str = response.data.content;
@@ -21,14 +21,12 @@ const ApiCourses = () => {
         var mydata = JSON.parse(base64ToStringNew);
         
         for(let x=0;x<mydata.length;x++){
-            let courses = (mydata[x].courses);
+            let projects = (mydata[x].projects);
             x++;
-            let course = (mydata[x].course);
+            let project = (mydata[x].project);
             x++;
-            let place = (mydata[x].place);
-            x++;
-            let issuedate = (mydata[x].issuedate);
-            setcourse(courses, course,place,issuedate);
+            let link = (mydata[x].link);
+            setproject(projects, project,link);
         }
         
        
@@ -41,4 +39,4 @@ const ApiCourses = () => {
   return <div></div>;
 };
 
-export default ApiCourses;
+export default ApiProjects;

@@ -14,6 +14,7 @@ const Ribbon = () => {
 const Container = styled.p`
 float:left;
 margin-left:1.5%;
+margin-top:1.5%;
 
 .ribbon{
   position:relative;

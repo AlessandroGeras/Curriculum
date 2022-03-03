@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import Ribbon from "./ribbon";
 
 const Tags = () => {
-  const tagsReducer = useSelector((state) => state.tagreducer.tags);
+  const tagsReducer = useSelector((state) => state.tagReducer.tags)
 
   return (
     <div>
@@ -60,6 +60,7 @@ const Container = styled.div`
   grid-template-columns: auto auto auto;
   align-items: center;  
   text-align:center;
+  margin-left:0;
 
   &.ribbon{margin-left:12.5%;}
 

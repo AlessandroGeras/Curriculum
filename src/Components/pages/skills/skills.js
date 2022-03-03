@@ -5,8 +5,11 @@ import { useSelector } from "react-redux";
 
 
 const Skills = () => {
-  const coursesReducer = useSelector((state) => state.coursereducer.courses);
-  const certificationsReducer = useSelector((state) => state.certificationreducer.certifications);
+  const coursesReducer = useSelector((state) => state.courseReducer.courses);
+  const certificationsReducer = useSelector((state) => state.certificationReducer.certifications);
+  const bootcampsReducer = useSelector((state) => state.bootcampReducer.bootcamps);
+  const projectsReducer = useSelector((state) => state.projectReducer.projects);
+
 
   
 
@@ -21,19 +24,62 @@ const Skills = () => {
     <div>
       <BackGround>
 
+        <Projects>
+        {projectsReducer.map((projectitemlist, projectitemlistindex) => (
+            <div key={projectitemlistindex}>
+              {" "}
+              <article>
+                <h3>{projectitemlist.projects}</h3>
+                <h4>{projectitemlist.project}</h4>
+                <br />
+                <a className="Certificado" href={projectitemlist.link} target="_blank">Certificado</a>
+                </article>
+            </div>
+          ))}
+
+
+
+
+        </Projects>
+
         <Courses>
         {coursesReducer.map((courseitemlist, courseitemlistindex) => (
             <div key={courseitemlistindex}>
               {" "}
-              <article>
+              <article className={courseitemlist.courses}>
                 <h3>{courseitemlist.courses}</h3>
                 <h4>{courseitemlist.course}</h4>
                 <br />
                 <p>{courseitemlist.place}</p>
+                <br />
+                <p>{courseitemlist.issuedate}</p>
                 </article>
             </div>
           ))}
           </Courses>
+
+          <Bootcamps>
+
+          {bootcampsReducer.map((bootcampitemlist, bootcampitemlistindex) => (
+            <div key={bootcampitemlistindex}>
+              {" "}
+              <article className={bootcampitemlist.bootcamps}>
+                <h3>{bootcampitemlist.bootcamps}</h3>
+                <h4>{bootcampitemlist.bootcamp}</h4>
+                <br />
+                <p>{bootcampitemlist.workload}</p>
+                <br />
+                <p>{bootcampitemlist.issuedate}</p>
+                <a className="Certificado" href={bootcampitemlist.link} target="_blank">Certificado</a>
+                </article>
+            </div>
+          ))}
+
+
+          </Bootcamps>
+
+
+
 
           <Certifications>
 
@@ -45,7 +91,7 @@ const Skills = () => {
                 <h4>{certificationitemlist.type}</h4>
                 <br />
                 <p>{certificationitemlist.certification}</p>
-                <a href={certificationitemlist.link} target="_blank">Certificado</a>
+                <a className="Certificado" href={certificationitemlist.link} target="_blank">Certificado</a>
                 </article>
             </div>
           ))}
@@ -67,7 +113,13 @@ padding-top:2.5%;
 font-family: 'Architects Daughter', cursive;
   `;
 
+  const Projects = styled.div`
+  display: grid;
+  grid-template-columns: auto auto auto;
+  `;
+
   const Courses = styled.div`
+  margin-top:5%;
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   `;
@@ -76,6 +128,12 @@ font-family: 'Architects Daughter', cursive;
   margin-top:5%;
   display: grid;
   grid-template-columns: auto auto auto auto auto;
+  `;
+
+  const Bootcamps = styled.div`
+  margin-top:5%;
+  display: grid;
+  grid-template-columns: auto;
   `;
 
 export default Skills;

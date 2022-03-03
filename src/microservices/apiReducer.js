@@ -4,6 +4,8 @@ import ApiTags from './apiTags';
 import ApiJobs from './apiJobs';
 import ApiCourses from "./apiCourses";
 import ApiCertifications from "./apiCertifications";
+import ApiBootcamps from './apiBootcamps';
+import ApiProjects from './apiProjects';
 
 const ApiReducer = () =>{
     return(
@@ -14,6 +16,8 @@ const ApiReducer = () =>{
     <ApiJobs />   
     <ApiCourses /> 
     <ApiCertifications /> 
+    <ApiBootcamps />
+    <ApiProjects />
 </div>
     );
 };

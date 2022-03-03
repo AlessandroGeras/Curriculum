@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import WebFont from "webfontloader";
 
 const Jobs = () => {
-  const jobsReducer = useSelector((state) => state.jobreducer.jobs);
+  const jobsReducer = useSelector((state) => state.jobReducer.jobs);
 
   WebFont.load({
     google: {
