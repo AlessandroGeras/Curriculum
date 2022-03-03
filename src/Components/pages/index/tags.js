@@ -103,8 +103,8 @@ const Container = styled.div`
 `;
 
 const Tag = styled.h2`
-  margin: 0 0% 5% 5%;
-  padding: 5px 7.5px 5px 7.5px;
+  margin: -2% 0% 5% 5%;
+  padding: 0 7.5px 5px 7.5px;
   width: 100%;
   font-size: 23px;
 

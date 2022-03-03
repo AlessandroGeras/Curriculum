@@ -29,77 +29,13 @@ background: linear-gradient(110deg, #fdcd3b 65%, #ffed4b 65%);
  
   /*########## Mobile##########*/
   @media screen and (max-width: 1000px) {
-    height:140vh;
+    height:100%;
     background-image: linear-gradient(
       to bottom,
       #fdcd3b,
       #ffed4b
     );
-  }
-  
- @media screen and (max-height: 1400px) {
-  height:100vh;
-}
-
-@media screen and (max-height: 1050px) {
-  height:105vh;
-}
-
-@media screen and (max-width:1000px) and (max-height: 950px) {
-  height:130vh;
-}
-
-@media screen and (max-height: 875px) {
-  height:130vh;
-}
-
-@media screen and (max-height: 800px) {
-  height:60vh;
-}
-
-@media screen and (max-width:2000px) and (max-height: 800px) {
-  height:70vh;
-}
-
-@media screen and (max-width:1300px) and (max-height: 800px) {
-  height:60vh;
-}
-
-@media screen and (max-width:1000px) and (max-height: 800px) {
-  height:140vh;
-}
-
-@media screen and (max-width:550px) and (max-height: 750px) {
-  height:150vh;
-}
-
-@media screen and (max-width:450px) and (max-height: 950px) {
-  height:130vh;
-}
-
-@media screen and (max-width:400px) and (max-height: 750px) {
-  height:145vh;
-}
-
-@media screen and (max-width:400px) and (max-height: 670px) {
-  height:165vh;
-}
-
-@media screen and (max-width:400px) and (max-height:875px) {
-  height:135vh;
-}
-
-@media screen and (max-width:380px) and (max-height:700px) {
-  height:170vh;
-}
-
-@media screen and (max-width:370px) and (max-height:750px) {
-  height:155vh;
-}
-
-@media screen and (max-width:300px) and (max-height: 670px) {
-  height:185vh;
-}
+  }  
 `;
 
 const BackgroundTwo = styled.div`
@@ -127,9 +63,10 @@ background: linear-gradient(110deg, #fdcd3b 65%, #ffed4b 65%);
 const ContainerLeft = styled.div`
   float: left;
   width: 70%;
-  margin: 1.5% 0 0 0;
+  margin: 0 0 0 0;
 
   img {
+    padding-top:1.5%;
     float: left;
     border-radius: 50%;
     width: 300px;
@@ -145,16 +82,15 @@ const ContainerLeft = styled.div`
   }
 
   @media screen and (max-width: 1000px) {
-    img {
+    width: 100%;
+    float:none;
+    img {  padding-top:1.5%;
       float:none;
       display:block;
       margin:0 auto;
     }
   }
 
-  @media screen and (max-width: 1000px) {
-    width: 100%;
-  }
 `;
 
 const ContainerRight = styled.div`

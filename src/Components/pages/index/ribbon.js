@@ -25,7 +25,7 @@ margin-top:1.5%;
 .text{
   display:inline-block;
   padding:.5em 1em;
-  min-width:19em;
+  min-width:21em;
   line-height:1.2em;
   background: #FFD72A;
   position:relative;

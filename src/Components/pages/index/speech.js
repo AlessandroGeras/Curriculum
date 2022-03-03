@@ -114,7 +114,7 @@ const Fa = styled.div`
   padding: 0px;
   width: 5%;
   position: relative;
-  top: 10%;
+  top: 7%;
   left: 10%;
 
   @media screen and (max-width: 1000px) {
@@ -128,7 +128,7 @@ const Text = styled.div`
   position: relative;
   width: 80%;
   text-align: justify;
-  top: 10%;
+  top: 6%;
   left: 13.5%;
 
   /*########## Mobile##########*/
@@ -147,10 +147,10 @@ const Signature = styled.div`
   position: relative;
   width: 10%;
   text-align: justify;
+  right:-2.5%;
   top: 75%;
   font-family: "Great Vibes", cursive;
-  font-size: 30px;
-  margin:0px;
+  font-size: 25px;
 
   /*########## Mobile##########*/
   @media screen and (max-width: 1250px) {
