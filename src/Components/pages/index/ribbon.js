@@ -75,16 +75,10 @@ margin-top:1.5%;
 }
 
 @media screen and (max-width: 1000px) {
+  float:none;
   .text{
     font-size:13.75px;
   }
-   }
-
-   @media screen and (max-width: 500px) {
-    .text{
-      
-    font-size:13.75px;
-    }
    }
 
    @media screen and (max-width: 390px) {

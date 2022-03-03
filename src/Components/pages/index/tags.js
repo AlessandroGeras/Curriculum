@@ -69,6 +69,7 @@ const Container = styled.div`
 
   @media screen and (max-width: 1000px) {
     grid-template-columns: auto auto auto auto;
+    margin-bottom:5%;
 
     &.ribbon{display:block;
       margin:0 auto;

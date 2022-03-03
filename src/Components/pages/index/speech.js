@@ -89,7 +89,7 @@ const ContainerColor = styled.div`
   position: relative;
   margin:0px;
   padding:0px;
-  top: -7%;
+  top: -7.5%;
   width: 2%;
   height: 100%;
   background: #b388dd;
@@ -97,7 +97,7 @@ const ContainerColor = styled.div`
 
   /*########## Mobile##########*/
   @media screen and (max-width: 1250px) {
-    top: -8.5%;
+    top: -9%;
   }
 
   @media screen and (max-width: 1000px) {
@@ -117,8 +117,12 @@ const Fa = styled.div`
   top: 7%;
   left: 10%;
 
+  @media screen and (max-width: 1250px) {
+    left: 10%;
+   }
+
   @media screen and (max-width: 1000px) {
-    top:20%;
+    top:17.5%;
     left: 5.5%;
    }
 `;
@@ -133,11 +137,12 @@ const Text = styled.div`
 
   /*########## Mobile##########*/
   @media screen and (max-width: 1250px) {
+    top: 5%;
     font-size: 14px;
   }
 
   @media screen and (max-width: 1000px) {
-   top:20%;
+   top:15%;
    left: 9.5%;
   }
 `;
@@ -154,8 +159,14 @@ const Signature = styled.div`
 
   /*########## Mobile##########*/
   @media screen and (max-width: 1250px) {
-    font-size: 25px;
-    right:2%;
+    font-size: 22.5px;
+    top: 73.5%;
+    right:-3%;
+  }
+
+  @media screen and (max-width: 1000px) {
+    top: 76.5%;
+    right:0.5%;
   }
 
   @media screen and (max-width: 280px) {

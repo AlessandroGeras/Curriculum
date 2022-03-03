@@ -59,14 +59,10 @@ font-family:'Roboto', sans-serif;
 
 /*########## Mobile##########*/
 @media screen and (max-width: 1000px) {
-  margin:0 5% 0 30%;
-  font-size:15px;
-}
-
-/*########## Mobile##########*/
-@media screen and (max-width: 1000px) {
   margin:0 5% 0 5%;
-  text-align:center;}
+  font-size:15px;
+  text-align:center;
+}
 `;
 
 const Container = styled.div`

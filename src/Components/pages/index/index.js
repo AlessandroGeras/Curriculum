@@ -30,12 +30,17 @@ background: linear-gradient(110deg, #fdcd3b 65%, #ffed4b 65%);
   /*########## Mobile##########*/
   @media screen and (max-width: 1000px) {
     height:100%;
+    padding-bottom:3.5%;
     background-image: linear-gradient(
       to bottom,
       #fdcd3b,
       #ffed4b
     );
   }  
+
+  @media screen and (max-width: 925px) and (min-height: 1100px){
+    height:100vh;
+  }
 `;
 
 const BackgroundTwo = styled.div`
@@ -101,6 +106,7 @@ const ContainerRight = styled.div`
 
   /*########## Mobile##########*/
   @media screen and (max-width: 1000px) {
+    float:none;
     width: 100%;
     margin-top:-7%;
   }
@@ -123,10 +129,7 @@ margin-top:5%;
 }
 
 @media screen and (max-width: 1000px) {
-  margin-top:40px;
-}
-
-@media screen and (max-width: 1000px) {  
+  float:none;
   width:100%;
   margin-top:5%;
 }
