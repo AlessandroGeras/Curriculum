@@ -116,7 +116,6 @@ const ContainerDown = styled.div`
 float:left;
 width:65%;
 margin-top:5%;
-background:blue;
 
 /*########## Mobile##########*/
 @media screen and (max-width: 1250px) {

@@ -34,6 +34,7 @@ width:575px;
     width:470px; 
   }
   @media screen and (max-width: 1000px) {
+    position:static;
     display: block;
     margin: auto;
     width: 100%;    
@@ -60,37 +61,10 @@ const Container = styled.div`
     width:100%;
     margin-bottom:5%;
 
-    &.ribbon{display:block;
-      margin:0 auto;
-      width: 325px;
-    }
-
     @media screen and (max-width: 650px) {
       grid-template-columns: auto auto auto;
       width:100%;
       }
-
-    @media screen and (max-width: 500px) {
-      &.ribbon{display:block;
-        margin:0 auto;
-        width: 300px;
-      }
-
-     @media screen and (max-width: 390px) {
-      &.ribbon{display:block;
-        margin:0 auto;
-        width: 200px;
-      }
-
-      @media screen and (max-width: 380px) {
-        &.ribbon{display:block;
-         margin-left:12.5%;
-        }
-
-        @media screen and (max-width: 280px) {
-          &.ribbon{display:block;
-           margin-left:2%;
-          }
 `;
 
 const Tag = styled.h2`

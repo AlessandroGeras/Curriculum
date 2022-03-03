@@ -23,6 +23,7 @@ const Jobs = () => {
               {" "}
               <Ribbon>
                 <h2>{itemlist.job}</h2>
+                <br /> 
                 <h4>{itemlist.role}</h4>
                 <p>Skills - {itemlist.skills}</p>
                 <p>
