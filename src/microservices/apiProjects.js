@@ -6,7 +6,7 @@ import { project } from "../Redux/actions/actionsProjects";
 
 const ApiProjects = () => {
     const dispatch = useDispatch();
-    const setproject = (projectsArgs, projectArgs,linkArgs) => {dispatch(project(projectsArgs, projectArgs,linkArgs));
+    const setproject = (typeArgs, projectArgs,linkfrontendArgs,linkbackendArgs) => {dispatch(project(typeArgs, projectArgs,linkfrontendArgs,linkbackendArgs));
     };
 
   useEffect(() => {
@@ -19,17 +19,18 @@ const ApiProjects = () => {
         let buff = new Buffer(str, "base64");
         let base64ToStringNew = buff.toString("utf-8");
         var mydata = JSON.parse(base64ToStringNew);
-        
-        for(let x=0;x<mydata.length;x++){
-            let projects = (mydata[x].projects);
-            x++;
-            let project = (mydata[x].project);
-            x++;
-            let link = (mydata[x].link);
-            setproject(projects, project,link);
-        }
-        
-       
+
+        const setDispatch = () => {
+          for (let itens in mydata) {
+            let type = mydata[itens][0].type;
+            let project = mydata[itens][1].project;
+            let linkfrontend = mydata[itens][2].linkfrontend;
+            let linkbackend = mydata[itens][3].linkbackend;
+            setproject(type,project, linkfrontend,linkbackend);
+          }
+        };
+
+        setDispatch();
       })
       .catch((err) => {
         console.error("Erro: " + err);

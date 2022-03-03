@@ -1,22 +1,17 @@
-const speechReducer = (state = "", action) => {
+const initialState = {
+  speechs: [],
+};
+
+const speechsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "SPEECHONE":
+    case "SPEECH":
       return {
         ...state,
-        speechone: action.payload.speech,
+        speechs: [...state.speechs, action.payload],
       };
-    case "SPEECHTWO":
-      return {
-        ...state,
-        speechtwo: action.payload.speech,
-      };
-    case "SPEECHTHREE":
-      return {
-        ...state,
-        speechthree: action.payload.speech,
-      };
+
     default:
       return state;
   }
 };
-export default speechReducer;
+export default speechsReducer;

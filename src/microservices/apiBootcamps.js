@@ -6,7 +6,7 @@ import { bootcamp } from "../Redux/actions/actionsBootcamps";
 
 const ApiBootcamps = () => {
     const dispatch = useDispatch();
-    const setbootcamp = (bootcampsArgs,bootcampArgs, workloadArgs,issuedateArgs,linkArgs) => {dispatch(bootcamp(bootcampsArgs,bootcampArgs, workloadArgs,issuedateArgs,linkArgs));
+    const setbootcamp = (typeArgs,bootcampArgs, workloadArgs,issuedateArgs,linkArgs) => {dispatch(bootcamp(typeArgs,bootcampArgs, workloadArgs,issuedateArgs,linkArgs));
     };
 
   useEffect(() => {
@@ -20,21 +20,18 @@ const ApiBootcamps = () => {
         let base64ToStringNew = buff.toString("utf-8");
         var mydata = JSON.parse(base64ToStringNew);
         
-        for(let x=0;x<mydata.length;x++){
-          let bootcamps = (mydata[x].bootcamps);
-          x++;
-            let bootcamp = (mydata[x].bootcamp);
-            x++;
-            let workload = (mydata[x].workload);
-            x++;
-            let issuedate = (mydata[x].issuedate);
-            x++;
-            let link = (mydata[x].link);          
+        const setDispatch = () => {
+          for (let itens in mydata) {
+            let type = mydata[itens][0].type;
+            let bootcamp = mydata[itens][1].bootcamp;
+            let workload = mydata[itens][2].workload;
+            let issuedate = mydata[itens][3].issuedate;
+            let link = mydata[itens][4].link;
+            setbootcamp(type,bootcamp, workload,issuedate,link);
+          }
+        };
 
-            setbootcamp(bootcamps,bootcamp , workload,issuedate,link);
-        }
-        
-       
+        setDispatch();   
       })
       .catch((err) => {
         console.error("Erro: " + err);

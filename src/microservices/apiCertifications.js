@@ -6,7 +6,7 @@ import { certification } from "../Redux/actions/actionsCertifications";
 
 const ApiCertifications = () => {
     const dispatch = useDispatch();
-    const setcertification = (certificationsArgs, typeArgs,certificationArgs,linkArgs) => {dispatch(certification(certificationsArgs, typeArgs,certificationArgs,linkArgs));
+    const setcertification = (typeArgs, categoryArgs,certificationArgs,linkArgs) => {dispatch(certification(typeArgs, categoryArgs,certificationArgs,linkArgs));
     };
 
   useEffect(() => {
@@ -20,18 +20,17 @@ const ApiCertifications = () => {
         let base64ToStringNew = buff.toString("utf-8");
         var mydata = JSON.parse(base64ToStringNew);
         
-        for(let x=0;x<mydata.length;x++){
-            let certifications = (mydata[x].certifications);
-            x++;
-            let type = (mydata[x].type);
-            x++;
-            let certification = (mydata[x].certification);
-            x++;
-            let link = (mydata[x].link);
-            setcertification(certifications, type,certification,link);
-        }
-        
-       
+        const setDispatch = () => {
+          for (let itens in mydata) {
+            let type = mydata[itens][0].type;
+            let category = mydata[itens][1].category;
+            let certification = mydata[itens][2].certification;
+            let link = mydata[itens][3].link;
+            setcertification(type,category, certification,link);
+          }
+        };
+
+        setDispatch();       
       })
       .catch((err) => {
         console.error("Erro: " + err);

@@ -23,9 +23,10 @@ const ApiTags = () => {
 
         const setDispatch = () => {
           for (let itens in mydata) {
+            let tag = mydata[itens].skill;
             let random = Math.floor(Math.random() * 14);
             let randomstring = "random" + random;
-            settag(mydata[itens].skill, randomstring);
+            settag(tag, randomstring);
           }
         };
 

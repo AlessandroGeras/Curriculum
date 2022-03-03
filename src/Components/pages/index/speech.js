@@ -5,7 +5,7 @@ import WebFont from "webfontloader";
 import { useSelector } from "react-redux";
 
 const Speech = () => {
-  const speechReducer = useSelector((state) => state.speech);
+  const speechReducer = useSelector((state) => state.speechReducer.speechs);
 
   WebFont.load({
     google: {
@@ -27,13 +27,13 @@ const Speech = () => {
             </IconContext.Provider>
           </Fa>
           <Text>
-            {speechReducer.speechone}
-            <br />
-            <br />
-            {speechReducer.speechtwo}
-            <br />
-            <br />
-            {speechReducer.speechthree}
+          {speechReducer.map((itemlist, itemlistindex) => (
+            <div key={itemlistindex}>
+              {" "}             
+               <div>{itemlist.speech}</div>
+                <br />              
+            </div>
+          ))}
           </Text>
           <Signature>Geras</Signature>
           <ContainerColor></ContainerColor>

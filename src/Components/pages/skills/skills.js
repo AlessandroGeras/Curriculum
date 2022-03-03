@@ -29,10 +29,11 @@ const Skills = () => {
             <div key={projectitemlistindex}>
               {" "}
               <article>
-                <h3>{projectitemlist.projects}</h3>
+                <h3>{projectitemlist.type}</h3>
                 <h4>{projectitemlist.project}</h4>
                 <br />
-                <a className="Certificado" href={projectitemlist.link} target="_blank">Certificado</a>
+                <a className="Certificado" href={projectitemlist.linkfrontend} target="_blank">Link FrontEnd</a>                
+                <a className="Certificado" href={projectitemlist.linkbackend} target="_blank">{projectitemlist.linkbackend!=="null" ? "Link BackEnd" : ""}</a>
                 </article>
             </div>
           ))}
@@ -46,8 +47,8 @@ const Skills = () => {
         {coursesReducer.map((courseitemlist, courseitemlistindex) => (
             <div key={courseitemlistindex}>
               {" "}
-              <article className={courseitemlist.courses}>
-                <h3>{courseitemlist.courses}</h3>
+              <article className={courseitemlist.type}>
+                <h3>{courseitemlist.type}</h3>
                 <h4>{courseitemlist.course}</h4>
                 <br />
                 <p>{courseitemlist.place}</p>
@@ -63,8 +64,8 @@ const Skills = () => {
           {bootcampsReducer.map((bootcampitemlist, bootcampitemlistindex) => (
             <div key={bootcampitemlistindex}>
               {" "}
-              <article className={bootcampitemlist.bootcamps}>
-                <h3>{bootcampitemlist.bootcamps}</h3>
+              <article className={bootcampitemlist.type}>
+                <h3>{bootcampitemlist.type}</h3>
                 <h4>{bootcampitemlist.bootcamp}</h4>
                 <br />
                 <p>{bootcampitemlist.workload}</p>
@@ -86,9 +87,9 @@ const Skills = () => {
 {certificationsReducer.map((certificationitemlist, certificationitemlistindex) => (
             <div key={certificationitemlistindex}>
               {" "}
-              <article className={certificationitemlist.type}>
-                <h3>{certificationitemlist.certifications}</h3>
-                <h4>{certificationitemlist.type}</h4>
+              <article className={certificationitemlist.category}>
+                <h3>{certificationitemlist.type}</h3>
+                <h4>{certificationitemlist.category}</h4>
                 <br />
                 <p>{certificationitemlist.certification}</p>
                 <a className="Certificado" href={certificationitemlist.link} target="_blank">Certificado</a>

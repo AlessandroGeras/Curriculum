@@ -1,6 +1,6 @@
-export const bootcamp = (bootcampsArgs,bootcampArgs, workloadArgs,issuedateArgs,linkArgs) => {
+export const bootcamp = (typeArgs,bootcampArgs, workloadArgs,issuedateArgs,linkArgs) => {
     return {
       type: "BOOTCAMP",
-      payload: { bootcamps:bootcampsArgs,bootcamp: bootcampArgs, workload: workloadArgs,issuedate: issuedateArgs,link:linkArgs},
+      payload: { type:typeArgs,bootcamp: bootcampArgs, workload: workloadArgs,issuedate: issuedateArgs,link:linkArgs},
     };
   };

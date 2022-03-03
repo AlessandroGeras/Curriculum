@@ -1,6 +1,6 @@
-export const certification = (certificationsArgs, typeArgs,certificationArgs,linkArgs) => {
+export const certification = (typeArgs, categoryArgs,certificationArgs,linkArgs) => {
     return {
       type: "CERTIFICATION",
-      payload: { certifications: certificationsArgs, type: typeArgs,certification: certificationArgs,link:linkArgs},
+      payload: { type: typeArgs, category: categoryArgs,certification: certificationArgs,link:linkArgs},
     };
   };

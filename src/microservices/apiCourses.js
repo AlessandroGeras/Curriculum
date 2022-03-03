@@ -6,7 +6,7 @@ import { course } from "../Redux/actions/actionsCourses";
 
 const ApiCourses = () => {
     const dispatch = useDispatch();
-    const setcourse = (coursesArgs, courseArgs,placeArgs,issuedateArgs) => {dispatch(course(coursesArgs, courseArgs,placeArgs,issuedateArgs));
+    const setcourse = (typeArgs, courseArgs,placeArgs,issuedateArgs) => {dispatch(course(typeArgs, courseArgs,placeArgs,issuedateArgs));
     };
 
   useEffect(() => {
@@ -20,18 +20,17 @@ const ApiCourses = () => {
         let base64ToStringNew = buff.toString("utf-8");
         var mydata = JSON.parse(base64ToStringNew);
         
-        for(let x=0;x<mydata.length;x++){
-            let courses = (mydata[x].courses);
-            x++;
-            let course = (mydata[x].course);
-            x++;
-            let place = (mydata[x].place);
-            x++;
-            let issuedate = (mydata[x].issuedate);
-            setcourse(courses, course,place,issuedate);
-        }
-        
-       
+        const setDispatch = () => {
+          for (let itens in mydata) {
+            let type = mydata[itens][0].type;
+            let course = mydata[itens][1].course;
+            let place = mydata[itens][2].place;
+            let issuedate = mydata[itens][3].issuedate;
+            setcourse(type, course,place,issuedate);
+          }
+        };
+
+        setDispatch();     
       })
       .catch((err) => {
         console.error("Erro: " + err);

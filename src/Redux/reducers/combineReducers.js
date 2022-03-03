@@ -1,4 +1,4 @@
-import speech from "./reducerSpeech";
+import speechReducer from "./reducerSpeech";
 import about from "./reducerAbout";
 import tagReducer from "./reducerTags";
 import jobReducer from "./reducerJobs";
@@ -10,7 +10,7 @@ import projectReducer from "./reducerProjects";
 import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
-  speech,
+  speechReducer,
   about,
   tagReducer,
   jobReducer,

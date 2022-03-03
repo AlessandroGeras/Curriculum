@@ -1,6 +1,6 @@
-export const project = (projectsArgs, projectArgs,linkArgs) => {
+export const project = (typeArgs, projectArgs,linkfrontendArgs,linkbackendArgs) => {
     return {
       type: "PROJECT",
-      payload: { projects: projectsArgs, project: projectArgs,link:linkArgs},
+      payload: { type: typeArgs, project: projectArgs,linkfrontend:linkfrontendArgs,linkbackend:linkbackendArgs},
     };
   };

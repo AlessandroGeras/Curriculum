@@ -20,20 +20,18 @@ const ApiJobs = () => {
         let base64ToStringNew = buff.toString("utf-8");
         var mydata = JSON.parse(base64ToStringNew);
         
-        for(let x=0;x<mydata.length;x++){
-            let job = (mydata[x].job);
-            x++;
-            let role = (mydata[x].role);
-            x++;
-            let skills = (mydata[x].skills);
-            x++;
-            let start = (mydata[x].start);
-            x++;
-            let end = (mydata[x].end);
+        const setDispatch = () => {
+          for (let itens in mydata) {
+            let job = mydata[itens][0].job;
+            let role = mydata[itens][1].role;
+            let skills = mydata[itens][2].skills;
+            let start = mydata[itens][3].start;
+            let end = mydata[itens][4].end;            
             setjob(job,role,skills,start,end);
-        }
+          }
+        };
         
-       
+        setDispatch();
       })
       .catch((err) => {
         console.error("Erro: " + err);
