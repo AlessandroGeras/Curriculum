@@ -25,19 +25,29 @@ article {
 	border-width: 0 var(--s0) var(--s0) 0;
 	padding: var(--s1) $p $p var(--s1);
 	background: var(--c) padding-box;
+
+    &.CURSO {
+		--c: #{invert(#004d40)};
+		filter: invert(1)
+	}
+
+    &.BOOTCAMP {
+		--c: #{invert(rgb(130,0,0))};
+		filter: invert(1)
+	}
 	
 	&.SCRUM,&.PROJETO,&.VISUAL,&.BOOTSTRAP,&.GIT,&.TYPESCRIPT,&.HTML {
-		--c: #{invert(indigo)};
+		--c: #{invert(black)};
 		filter: invert(1)
 	}
 
     &.LÓGICA {
-		--c: #{invert(rgb(15, 130, 0))};
+		--c: #{invert(#455EDE)};
 		filter: invert(1)
 	}
 
     &.NODEJS {
-		--c: #{invert(#AFB42B)};
+		--c: #{invert(#36454F)};
 		filter: invert(1)
 	}
 
@@ -46,13 +56,8 @@ article {
 		filter: invert(1)
 	}
 
-    &.API {
-		--c: #{invert(#455EDE)};
-		filter: invert(1)
-	}
-
     &.REACTJS {
-		--c: #{invert(rgb(130, 0, 0))};
+		--c: #{invert(indigo)};
 		filter: invert(1)
 	}
     
@@ -62,7 +67,7 @@ article {
 	}
 
     &.SQL {
-		--c: #{invert(#004d40)};
+		--c: #{invert(rgb(15, 130, 0))};
 		filter: invert(1)
 	}
 	
@@ -85,6 +90,6 @@ h3 {
 	line-height: 1.75
 }
 
-a{position:absolute;
-bottom:0;}
 
+a.Certificado{position:absolute;
+    bottom:0;}
