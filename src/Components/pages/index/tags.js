@@ -25,50 +25,39 @@ const Tags = () => {
 };
 
 const Main = styled.div`
+position:absolute;
+left:0;
+width:575px;
+
   /*########## Mobile##########*/
+  @media screen and (max-width: 1300px) {
+    width:470px; 
+  }
   @media screen and (max-width: 1000px) {
     display: block;
     margin: auto;
-    width: 600px;
+    width: 100%;    
   }
 
-  @media screen and (max-width: 650px) {
-    width: 460px;
-  }
-
-  @media screen and (max-width: 600px) {
-    width: 400px;
-  }
-
-  @media screen and (max-width: 412px) {
-    width: 380px;
-  }
-
-  @media screen and (max-width: 380px) {
-    width: 360px;
-  }
-
-  @media screen and (max-width: 280px) {
-    width: 270px;
-  }
 `;
 
 const Container = styled.div`
   width: 200px;
-  display: grid;
+  display: grid;  
   grid-column-gap: 12.5%;
   grid-template-columns: auto auto auto;
   align-items: center;  
   text-align:center;
   margin-left:0;
 
-  &.ribbon{margin-left:12.5%;}
-
-  @media screen and (max-width: 1300px) {
-      &.ribbon{margin-left:10%;}
+  &.ribbon{grid:none;
+    width:100%;
+    margin:0 auto;}
 
   @media screen and (max-width: 1000px) {
     grid-template-columns: auto auto auto auto;
+    grid-column-gap: 0%;
+    width:100%;
     margin-bottom:5%;
 
     &.ribbon{display:block;
@@ -78,6 +67,7 @@ const Container = styled.div`
 
     @media screen and (max-width: 650px) {
       grid-template-columns: auto auto auto;
+      width:100%;
       }
 
     @media screen and (max-width: 500px) {
@@ -104,7 +94,7 @@ const Container = styled.div`
 `;
 
 const Tag = styled.h2`
-  margin: -2% 0% 5% 5%;
+  margin: -2% 0% 5% 0%;
   padding: 0 7.5px 5px 7.5px;
   width: 100%;
   font-size: 23px;
@@ -276,20 +266,8 @@ const Tag = styled.h2`
     font-size: 18px;
   }
 
-  @media screen and (max-width: 650px) {
-    font-size: 17px;
-  }
-
-  @media screen and (max-width: 600px) {
-    font-size: 14px;
-  }
-
-  @media screen and (max-width: 575px) {
-    font-size: 13px;
-  }
-
-  @media screen and (max-width: 390px) {
-    font-size: 9px;
+  @media screen and (max-width: 450px) {
+    font-size: 15px;
   }
 
   @media screen and (max-width: 380px) {
@@ -297,7 +275,7 @@ const Tag = styled.h2`
   }
 
   @media screen and (max-width: 280px) {
-    font-size: 7.5px;
+    font-size: 10px;
   }
 `;
 

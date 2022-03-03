@@ -30,7 +30,7 @@ background: linear-gradient(110deg, #fdcd3b 65%, #ffed4b 65%);
   /*########## Mobile##########*/
   @media screen and (max-width: 1000px) {
     height:100%;
-    padding-bottom:3.5%;
+    padding-bottom:7.5%;
     background-image: linear-gradient(
       to bottom,
       #fdcd3b,
@@ -49,12 +49,8 @@ background: linear-gradient(110deg, #fdcd3b 65%, #ffed4b 65%);
 
 /*########## Mobile##########*/
 @media screen and (max-width: 1000px) {
-  height:70vh;
-}
-
-@media screen and (max-width: 1000px) {
   display:none;
- }
+}
 
  @media screen and (max-height: 800px) {
   height:40vh;
@@ -68,7 +64,6 @@ background: linear-gradient(110deg, #fdcd3b 65%, #ffed4b 65%);
 const ContainerLeft = styled.div`
   float: left;
   width: 70%;
-  margin: 0 0 0 0;
 
   img {
     padding-top:1.5%;
@@ -120,8 +115,8 @@ const ContainerRight = styled.div`
 const ContainerDown = styled.div`
 float:left;
 width:65%;
-margin-left:1%;
 margin-top:5%;
+background:blue;
 
 /*########## Mobile##########*/
 @media screen and (max-width: 1250px) {
@@ -131,6 +126,7 @@ margin-top:5%;
 @media screen and (max-width: 1000px) {
   float:none;
   width:100%;
+  margin-left:0;
   margin-top:5%;
 }
 

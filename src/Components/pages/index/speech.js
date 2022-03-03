@@ -125,6 +125,11 @@ const Fa = styled.div`
     top:17.5%;
     left: 5.5%;
    }
+
+   @media screen and (max-width: 280px) {
+    top:16%;
+    left: 4.5%;
+   }
 `;
 
 const Text = styled.div`
@@ -144,7 +149,7 @@ const Text = styled.div`
   @media screen and (max-width: 1000px) {
    top:15%;
    left: 9.5%;
-  }
+   top:14%;
 `;
 
 const Signature = styled.div`
@@ -169,9 +174,15 @@ const Signature = styled.div`
     right:0.5%;
   }
 
+  @media screen and (max-width: 420px) {
+    top: 78%;
+    right:1%;
+  }
+
   @media screen and (max-width: 280px) {
-    top: 80.5%;
-    right:7.5%;
+    font-size: 20px;
+    top: 83%;
+    right:4%;
   }
 `;
 
