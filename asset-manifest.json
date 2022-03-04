@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Curriculum/static/css/main.e8d685af.css",
+    "main.js": "/Curriculum/static/js/main.ff0a61c3.js",
+    "index.html": "/Curriculum/index.html",
+    "main.e8d685af.css.map": "/Curriculum/static/css/main.e8d685af.css.map",
+    "main.ff0a61c3.js.map": "/Curriculum/static/js/main.ff0a61c3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e8d685af.css",
+    "static/js/main.ff0a61c3.js"
+  ]
+}
