@@ -20,7 +20,7 @@ Início - 21/02/2022 - Conclusão - 04/03/2022 </h3>
     <li><a href="#dia9">Dia 9</a></li>
     <li><a href="#dia10">Dia 10</a></li>
     <li><a href="#dia11">Dia 11</a></li>
-    <li><a href="#site">Como usar o site</a></li>
+    <li><a href="#conclusão">Conclusão</a></li>
     <li><a href="#tecnologias">Dependências e Tecnologias usadas</a></li>
   </ol>
 </details>
@@ -76,7 +76,11 @@ Subindo todos os frontends e apis.
 <p align="right">(<a href="#indice">voltar ao indice</a>)</p>
 
 <h2 name="dia11">Dia 11</h2>
-Testes finais e conclusão. Incrível que não tenha dado nada de errado até o fim. Realmente estou no caminho certo 👊
+Testes finais e finalização. Incrível que não tenha dado nada de errado até o fim. Realmente estou no caminho certo 👊
+<p align="right">(<a href="#indice">voltar ao indice</a>)</p>
+
+<h2 name="conclusão">Conclusão</h2>
+Foi bem divertido fazer o projeto. Agora e só atualizar e incorpoar coisas novas conforme a lista de skills for subindo. De repente consumir uma api de whatsapp, vamos ver isso mais para frente. Agora, rumo à outros projetos 💪  
 <p align="right">(<a href="#indice">voltar ao indice</a>)</p>
 
 <h2 name="tecnologias">Dependências e Tecnologias usadas</h2>
