@@ -31,10 +31,8 @@ const Skills = () => {
                 <h3>{projectitemlist.type}</h3>
                 <h4>{projectitemlist.project}</h4>
                 <br />
-                <a href={projectitemlist.live} target="_blank">{projectitemlist.live!=="null" ? "Ver Projeto Online" : ""}</a>
-                <br />
-                <a href={projectitemlist.linkfrontend} target="_blank">FrontEnd Files Link</a> 
-                <br />               
+                <a className="projeto" href={projectitemlist.live} target="_blank">{projectitemlist.live!=="null" ? "Ver Projeto Online" : ""}</a>
+                <a className="projeto" href={projectitemlist.linkfrontend} target="_blank">FrontEnd Files Link</a> 
                 <a href={projectitemlist.linkbackend} target="_blank">{projectitemlist.linkbackend!=="null" ? "BackEnd Files Link" : ""}</a>
                 </article>
             </div>
@@ -73,7 +71,7 @@ const Skills = () => {
                 <p>{bootcampitemlist.workload}</p>
                 <br />
                 <p>{bootcampitemlist.issuedate}</p>
-                <a className="Certificado" href={bootcampitemlist.link} target="_blank">Certificado</a>
+                <a className="certificado" href={bootcampitemlist.link} target="_blank">Certificado</a>
                 </article>
             </div>
           ))}
