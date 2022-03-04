@@ -31,9 +31,11 @@ const Skills = () => {
                 <h3>{projectitemlist.type}</h3>
                 <h4>{projectitemlist.project}</h4>
                 <br />
-                <a className="projeto" href={projectitemlist.live} target="_blank">{projectitemlist.live!=="null" ? "Ver Projeto Online" : ""}</a>
-                <a className="projeto" href={projectitemlist.linkfrontend} target="_blank">FrontEnd Files Link</a> 
-                <a href={projectitemlist.linkbackend} target="_blank">{projectitemlist.linkbackend!=="null" ? "BackEnd Files Link" : ""}</a>
+                {projectitemlist.live !=="null" && <div><h5>Ver Projeto Online: <a href={projectitemlist.live} target="_blank">Link</a></h5></div>}
+
+                <div><h5>Frontend Files: <a href={projectitemlist.linkfrontend} target="_blank">Link</a></h5></div>
+               
+                {projectitemlist.linkbackend !=="null" && <div><h5>Backend Files: <a href={projectitemlist.linkbackend} target="_blank">Link</a></h5></div>}
                 </article>
             </div>
           ))}
@@ -91,7 +93,7 @@ const Skills = () => {
                 <h4>{certificationitemlist.category}</h4>
                 <br />
                 <p>{certificationitemlist.certification}</p>
-                <a className="Certificado" href={certificationitemlist.link} target="_blank">Certificado</a>
+                <a className="certificado" href={certificationitemlist.link} target="_blank">Certificado</a>
                 </article>
             </div>
           ))}
