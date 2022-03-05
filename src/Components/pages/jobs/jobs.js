@@ -23,7 +23,7 @@ const Jobs = () => {
               {" "}
               <Ribbon>
                 <h2>{itemlist.job}</h2>
-                <br /> 
+                <br />
                 <h4>{itemlist.role}</h4>
                 <p>Skills - {itemlist.skills}</p>
                 <p>
@@ -57,7 +57,7 @@ const BackGround = styled.div`
 
   .bg {
     animation: ${Slide} 3s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg,  #fdcd3b 50%, #ffed4b 50%);
+    background-image: linear-gradient(-60deg, #fdcd3b 50%, #ffed4b 50%);
     bottom: 0;
     left: -50%;
     opacity: 0.5;

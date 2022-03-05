@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import Ribbon from "./ribbon";
 
 const Tags = () => {
-  const tagsReducer = useSelector((state) => state.tagReducer.tags)
+  const tagsReducer = useSelector((state) => state.tagReducer.tags);
 
   return (
     <div>
@@ -25,21 +25,20 @@ const Tags = () => {
 };
 
 const Main = styled.div`
-position:absolute;
-left:0;
-width:575px;
+  position: absolute;
+  left: 0;
+  width: 575px;
 
   /*########## Mobile##########*/
   @media screen and (max-width: 1300px) {
-    width:470px; 
+    width: 470px;
   }
   @media screen and (max-width: 1000px) {
-    position:static;
+    position: static;
     display: block;
     margin: auto;
-    width: 100%;    
+    width: 100%;
   }
-
 `;
 
 const Container = styled.div`

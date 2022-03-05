@@ -5,9 +5,10 @@ import { useDispatch } from "react-redux";
 import { job } from "../Redux/actions/actionsJobs";
 
 const ApiJobs = () => {
-    const dispatch = useDispatch();
-    const setjob = (jobArgs, roleArgs,skillsArgs,startArgs,endArgs) => {dispatch(job(jobArgs, roleArgs,skillsArgs,startArgs,endArgs));
-    };
+  const dispatch = useDispatch();
+  const setjob = (jobArgs, roleArgs, skillsArgs, startArgs, endArgs) => {
+    dispatch(job(jobArgs, roleArgs, skillsArgs, startArgs, endArgs));
+  };
 
   useEffect(() => {
     api
@@ -19,18 +20,18 @@ const ApiJobs = () => {
         let buff = new Buffer(str, "base64");
         let base64ToStringNew = buff.toString("utf-8");
         var mydata = JSON.parse(base64ToStringNew);
-        
+
         const setDispatch = () => {
           for (let itens in mydata) {
             let job = mydata[itens][0].job;
             let role = mydata[itens][1].role;
             let skills = mydata[itens][2].skills;
             let start = mydata[itens][3].start;
-            let end = mydata[itens][4].end;            
-            setjob(job,role,skills,start,end);
+            let end = mydata[itens][4].end;
+            setjob(job, role, skills, start, end);
           }
         };
-        
+
         setDispatch();
       })
       .catch((err) => {

@@ -1,10 +1,10 @@
-import styled, {keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 import WebFont from "webfontloader";
-import { HiAcademicCap } from 'react-icons/hi';
-import { Link } from 'react-router-dom';
+import { HiAcademicCap } from "react-icons/hi";
+import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import { useDispatch,useSelector } from "react-redux";
-import { jobbutton,skillbutton } from "../../Redux/actions/actionsButtons";
+import { useDispatch, useSelector } from "react-redux";
+import { jobbutton, skillbutton } from "../../Redux/actions/actionsButtons";
 
 WebFont.load({
   google: {
@@ -15,37 +15,41 @@ WebFont.load({
 const Skills = () => {
   const skillReducer = useSelector((state) => state.button);
   const dispatch = useDispatch();
-  
-  const changeButtonSkills = () =>{
+
+  const changeButtonSkills = () => {
     dispatch(skillbutton(false));
     dispatch(jobbutton(true));
-  }
-  
-  const changeButtonIndex = () =>{
+  };
+
+  const changeButtonIndex = () => {
     dispatch(skillbutton(true));
     dispatch(jobbutton(true));
-  }
+  };
 
   useEffect(() => {
-    if(window.location.pathname==="/Skills"){
+    if (window.location.pathname === "/Skills") {
       dispatch(skillbutton(false));
       dispatch(jobbutton(true));
-    }
-    else{
+    } else {
       dispatch(skillbutton(true));
     }
-}, []);
-
-
+  }, []);
 
   return (
     <div>
       <Lista>
-      <li className={skillReducer.skill===true ? "show" : "hide"}><Link to="/Skills" onClick={changeButtonSkills}>
-         <Fa><HiAcademicCap /></Fa>Skills</Link>
+        <li className={skillReducer.skill === true ? "show" : "hide"}>
+          <Link to="/Skills" onClick={changeButtonSkills}>
+            <Fa>
+              <HiAcademicCap />
+            </Fa>
+            Skills
+          </Link>
         </li>
-        <li className={skillReducer.skill===false ? "show" : "hide"}><Link to="/Curriculum" onClick={changeButtonIndex}>
-         Home</Link>
+        <li className={skillReducer.skill === false ? "show" : "hide"}>
+          <Link to="/Curriculum" onClick={changeButtonIndex}>
+            Home
+          </Link>
         </li>
       </Lista>
     </div>
@@ -101,7 +105,7 @@ animation-fill-mode: forwards;}
 `;
 
 const Fa = styled.div`
-margin-right:7.5px;
+  margin-right: 7.5px;
 `;
 
 export default Skills;

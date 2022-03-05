@@ -5,9 +5,10 @@ import { useDispatch } from "react-redux";
 import { course } from "../Redux/actions/actionsCourses";
 
 const ApiCourses = () => {
-    const dispatch = useDispatch();
-    const setcourse = (typeArgs, courseArgs,placeArgs,issuedateArgs) => {dispatch(course(typeArgs, courseArgs,placeArgs,issuedateArgs));
-    };
+  const dispatch = useDispatch();
+  const setcourse = (typeArgs, courseArgs, placeArgs, issuedateArgs) => {
+    dispatch(course(typeArgs, courseArgs, placeArgs, issuedateArgs));
+  };
 
   useEffect(() => {
     api
@@ -19,18 +20,18 @@ const ApiCourses = () => {
         let buff = new Buffer(str, "base64");
         let base64ToStringNew = buff.toString("utf-8");
         var mydata = JSON.parse(base64ToStringNew);
-        
+
         const setDispatch = () => {
           for (let itens in mydata) {
             let type = mydata[itens][0].type;
             let course = mydata[itens][1].course;
             let place = mydata[itens][2].place;
             let issuedate = mydata[itens][3].issuedate;
-            setcourse(type, course,place,issuedate);
+            setcourse(type, course, place, issuedate);
           }
         };
 
-        setDispatch();     
+        setDispatch();
       })
       .catch((err) => {
         console.error("Erro: " + err);

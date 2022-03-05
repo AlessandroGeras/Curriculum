@@ -1,19 +1,34 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import api from "./api";
 import { Buffer } from "buffer";
 import { useDispatch } from "react-redux";
-import { aboutone,abouttwo,aboutthree,aboutfour } from "../Redux/actions/actionsAbout";
+import {
+  aboutone,
+  abouttwo,
+  aboutthree,
+  aboutfour,
+} from "../Redux/actions/actionsAbout";
 
 const ApiAbout = () => {
   const dispatch = useDispatch();
-  const setaboutone = (args) => {dispatch(aboutone(args))};
-  const setabouttwo = (args) => {dispatch(abouttwo(args))};
-  const setaboutthree = (args) => {dispatch(aboutthree(args))};
-  const setaboutfour = (args) => {dispatch(aboutfour(args))};
+  const setaboutone = (args) => {
+    dispatch(aboutone(args));
+  };
+  const setabouttwo = (args) => {
+    dispatch(abouttwo(args));
+  };
+  const setaboutthree = (args) => {
+    dispatch(aboutthree(args));
+  };
+  const setaboutfour = (args) => {
+    dispatch(aboutfour(args));
+  };
 
   useEffect(() => {
     api
-      .get("/repos/AlessandroGeras/AlessandroGeras/contents/Curriculum/about.json")
+      .get(
+        "/repos/AlessandroGeras/AlessandroGeras/contents/Curriculum/about.json"
+      )
       .then((response) => {
         let str = response.data.content;
         let buff = new Buffer(str, "base64");

@@ -1,10 +1,10 @@
-import styled,{keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 import WebFont from "webfontloader";
-import { FaTools } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { FaTools } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import { useDispatch,useSelector } from "react-redux";
-import { jobbutton,skillbutton } from "../../Redux/actions/actionsButtons";
+import { useDispatch, useSelector } from "react-redux";
+import { jobbutton, skillbutton } from "../../Redux/actions/actionsButtons";
 
 WebFont.load({
   google: {
@@ -16,37 +16,40 @@ const Jobs = () => {
   const jobReducer = useSelector((state) => state.button);
   const dispatch = useDispatch();
 
-const changeButtonJobs = () =>{
-  dispatch(jobbutton(false));
-  dispatch(skillbutton(true));
-}
+  const changeButtonJobs = () => {
+    dispatch(jobbutton(false));
+    dispatch(skillbutton(true));
+  };
 
-const changeButtonIndex = () =>{
-  dispatch(jobbutton(true));
-  dispatch(skillbutton(true));
-}
+  const changeButtonIndex = () => {
+    dispatch(jobbutton(true));
+    dispatch(skillbutton(true));
+  };
 
-useEffect(() => {  
-    if(window.location.pathname==="/Jobs"){
+  useEffect(() => {
+    if (window.location.pathname === "/Jobs") {
       dispatch(jobbutton(false));
       dispatch(skillbutton(true));
-    }
-    else{     
+    } else {
       dispatch(jobbutton(true));
-    }    
-    
-},[] );
-
-
+    }
+  }, []);
 
   return (
     <div>
       <Lista>
-        <li className={jobReducer.job===true ? "show" : "hide"}><Link to="/Jobs" onClick={changeButtonJobs}>
-         <Fa><FaTools /></Fa>Jobs</Link>
+        <li className={jobReducer.job === true ? "show" : "hide"}>
+          <Link to="/Jobs" onClick={changeButtonJobs}>
+            <Fa>
+              <FaTools />
+            </Fa>
+            Jobs
+          </Link>
         </li>
-        <li className={jobReducer.job===false ? "show" : "hide"}><Link to="/Curriculum" onClick={changeButtonIndex}>
-         Home</Link>
+        <li className={jobReducer.job === false ? "show" : "hide"}>
+          <Link to="/Curriculum" onClick={changeButtonIndex}>
+            Home
+          </Link>
         </li>
       </Lista>
     </div>
@@ -101,7 +104,7 @@ animation-fill-mode: forwards;}
 `;
 
 const Fa = styled.div`
-margin-right:7.5px;
+  margin-right: 7.5px;
 `;
 
 export default Jobs;

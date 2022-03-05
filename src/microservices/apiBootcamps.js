@@ -5,9 +5,18 @@ import { useDispatch } from "react-redux";
 import { bootcamp } from "../Redux/actions/actionsBootcamps";
 
 const ApiBootcamps = () => {
-    const dispatch = useDispatch();
-    const setbootcamp = (typeArgs,bootcampArgs, workloadArgs,issuedateArgs,linkArgs) => {dispatch(bootcamp(typeArgs,bootcampArgs, workloadArgs,issuedateArgs,linkArgs));
-    };
+  const dispatch = useDispatch();
+  const setbootcamp = (
+    typeArgs,
+    bootcampArgs,
+    workloadArgs,
+    issuedateArgs,
+    linkArgs
+  ) => {
+    dispatch(
+      bootcamp(typeArgs, bootcampArgs, workloadArgs, issuedateArgs, linkArgs)
+    );
+  };
 
   useEffect(() => {
     api
@@ -19,7 +28,7 @@ const ApiBootcamps = () => {
         let buff = new Buffer(str, "base64");
         let base64ToStringNew = buff.toString("utf-8");
         var mydata = JSON.parse(base64ToStringNew);
-        
+
         const setDispatch = () => {
           for (let itens in mydata) {
             let type = mydata[itens][0].type;
@@ -27,11 +36,11 @@ const ApiBootcamps = () => {
             let workload = mydata[itens][2].workload;
             let issuedate = mydata[itens][3].issuedate;
             let link = mydata[itens][4].link;
-            setbootcamp(type,bootcamp, workload,issuedate,link);
+            setbootcamp(type, bootcamp, workload, issuedate, link);
           }
         };
 
-        setDispatch();   
+        setDispatch();
       })
       .catch((err) => {
         console.error("Erro: " + err);

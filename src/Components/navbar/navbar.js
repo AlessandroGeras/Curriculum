@@ -19,7 +19,7 @@ const navbar = () => {
 
 const Navbarbody = styled.div`
   background: #4a5668;
-  height:calc(20px + 1.7vw);
+  height: calc(20px + 1.7vw);
 `;
 
 export default navbar;

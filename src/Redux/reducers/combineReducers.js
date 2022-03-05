@@ -18,6 +18,6 @@ const allReducers = combineReducers({
   courseReducer,
   certificationReducer,
   bootcampReducer,
-  projectReducer
+  projectReducer,
 });
 export default allReducers;

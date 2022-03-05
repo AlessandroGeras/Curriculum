@@ -5,9 +5,17 @@ import { useDispatch } from "react-redux";
 import { certification } from "../Redux/actions/actionsCertifications";
 
 const ApiCertifications = () => {
-    const dispatch = useDispatch();
-    const setcertification = (typeArgs, categoryArgs,certificationArgs,linkArgs) => {dispatch(certification(typeArgs, categoryArgs,certificationArgs,linkArgs));
-    };
+  const dispatch = useDispatch();
+  const setcertification = (
+    typeArgs,
+    categoryArgs,
+    certificationArgs,
+    linkArgs
+  ) => {
+    dispatch(
+      certification(typeArgs, categoryArgs, certificationArgs, linkArgs)
+    );
+  };
 
   useEffect(() => {
     api
@@ -19,22 +27,25 @@ const ApiCertifications = () => {
         let buff = new Buffer(str, "base64");
         let base64ToStringNew = buff.toString("utf-8");
         var mydata = JSON.parse(base64ToStringNew);
-        
+
         const setDispatch = () => {
           for (let itens in mydata) {
             let type = mydata[itens][0].type;
             let category = mydata[itens][1].category;
             let certification = mydata[itens][2].certification;
             let link = mydata[itens][3].link;
-            setcertification(type,category, certification,link);
+            setcertification(type, category, certification, link);
           }
         };
 
-        setDispatch();       
+        setDispatch();
       })
       .catch((err) => {
-        console.error("Erro: " + err); if(err=="Error: Request failed with status code 403"){
-          alert("Erro 403: Desculpe mas você fez atingiu o limite maximo de consumo de api do Github! Tente novamente daqui uma hora! Grato!");
+        console.error("Erro: " + err);
+        if (err == "Error: Request failed with status code 403") {
+          alert(
+            "Erro 403: Desculpe mas você fez atingiu o limite maximo de consumo de api do Github! Tente novamente daqui uma hora! Grato!"
+          );
         }
       });
   }, []);

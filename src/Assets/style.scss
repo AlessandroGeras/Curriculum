@@ -1,96 +1,109 @@
 $u: 1.25;
 $w: 15em;
 $h: 16em;
-$p: .5em;
+$p: 0.5em;
 $o: 1.25em;
 $l: 4px;
 
-*, ::before { box-sizing: inherit; margin: 0 auto;}
+$mw: 15em;
+$mh: 16em;
 
-
+*,
+::before {
+  box-sizing: inherit;
+  margin: 0 auto;
+}
 
 body {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 article {
-	--c: #{mix(#fff, darkorange, 25%)};
-	--s0: calc(#{$o} + #{$l});
-	--s1: calc(#{$o} + #{$l} + #{$p});
-	place-self: center;
-	position: relative;
-    margin-bottom:5%;
-	width: $w; height: $h;
-	border: solid 0 transparent;
-	border-width: 0 var(--s0) var(--s0) 0;
-	padding: var(--s1) $p $p var(--s1);
-	background: var(--c) padding-box;
+  --c: #{mix(#fff, darkorange, 25%)};
+  --s0: calc(#{$o} + #{$l});
+  --s1: calc(#{$o} + #{$l} + #{$p});
+  place-self: center;
+  position: relative;
+  margin-bottom: 5%;
+  width: $w;
+  height: $h;
+  border: solid 0 transparent;
+  border-width: 0 var(--s0) var(--s0) 0;
+  padding: var(--s1) $p $p var(--s1);
+  background: var(--c) padding-box;
 
-    &.CURSO {
-		--c: #{invert(#004d40)};
-		filter: invert(1)
-	}
+  @media screen and (max-width: 750px) {
+    width: $mw;
+    height: $mh;
+  }
 
-    &.BOOTCAMP {
-		--c: #{invert(rgb(130,0,0))};
-		filter: invert(1)
-	}
-	
-	&.SCRUM,&.PROJETO,&.VISUAL,&.BOOTSTRAP,&.GIT,&.TYPESCRIPT,&.HTML {
-		--c: #{invert(black)};
-		filter: invert(1)
-	}
+  &.CURSO {
+    --c: #{invert(#004d40)};
+    filter: invert(1);
+  }
 
-    &.LÓGICA {
-		--c: #{invert(#455EDE)};
-		filter: invert(1)
-	}  
+  &.BOOTCAMP {
+    --c: #{invert(rgb(130, 0, 0))};
+    filter: invert(1);
+  }
 
-    &.NODEJS {
-		--c: #{invert(#36454F)};
-		filter: invert(1)
-	}
+  &.SCRUM,
+  &.PROJETO,
+  &.VISUAL,
+  &.BOOTSTRAP,
+  &.GIT,
+  &.TYPESCRIPT,
+  &.HTML {
+    --c: #{invert(black)};
+    filter: invert(1);
+  }
 
-    &.PROJETO {
-		--c: #{invert(rgb(0, 0, 0))};
-		filter: invert(1)
-	}
+  &.LÓGICA {
+    --c: #{invert(#455ede)};
+    filter: invert(1);
+  }
 
-    &.REACTJS {
-		--c: #{invert(indigo)};
-		filter: invert(1)
-	}
-    
-    &.JAVASCRIPT {
-		--c: #{invert(#502812)};
-		filter: invert(1)
-	}
+  &.NODEJS {
+    --c: #{invert(#36454f)};
+    filter: invert(1);
+  }
 
-    &.SQL {
-		--c: #{invert(rgb(15, 130, 0))};
-		filter: invert(1)
-	}
-	
-	&::before {
-		position: absolute;
-		top: 0; left: 0;
-		border: inherit;
-		border-width: $o 0 0 $o;
-		width: $w; height: $h;
-		box-shadow: inset 0 0 0 $l var(--c);
-		mix-blend-mode: difference;
-		pointer-events: none;
-		content: ''
-	}
+  &.PROJETO {
+    --c: #{invert(rgb(0, 0, 0))};
+    filter: invert(1);
+  }
+
+  &.REACTJS {
+    --c: #{invert(indigo)};
+    filter: invert(1);
+  }
+
+  &.JAVASCRIPT {
+    --c: #{invert(#502812)};
+    filter: invert(1);
+  }
+
+  &.SQL {
+    --c: #{invert(rgb(15, 130, 0))};
+    filter: invert(1);
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: inherit;
+    border-width: $o 0 0 $o;
+    width: $w;
+    height: $h;
+    box-shadow: inset 0 0 0 $l var(--c);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    content: "";
+
+    @media screen and (max-width: 750px) {
+      width: $mw;
+      height: $mh;
+    }
+  }
 }
-
-h3 {
-	font-size: 1.5em;
-	font-weight: 900;
-	line-height: 1.75
-}
-
-
-a.certificado{position:absolute;
-    bottom:0;}
-

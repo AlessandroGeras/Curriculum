@@ -5,9 +5,24 @@ import { useDispatch } from "react-redux";
 import { project } from "../Redux/actions/actionsProjects";
 
 const ApiProjects = () => {
-    const dispatch = useDispatch();
-    const setproject = (typeArgs, projectArgs,liveArgs,linkfrontendArgs,linkbackendArgs) => {dispatch(project(typeArgs, projectArgs,liveArgs,linkfrontendArgs,linkbackendArgs));
-    };
+  const dispatch = useDispatch();
+  const setproject = (
+    typeArgs,
+    projectArgs,
+    liveArgs,
+    linkfrontendArgs,
+    linkbackendArgs
+  ) => {
+    dispatch(
+      project(
+        typeArgs,
+        projectArgs,
+        liveArgs,
+        linkfrontendArgs,
+        linkbackendArgs
+      )
+    );
+  };
 
   useEffect(() => {
     api
@@ -27,7 +42,7 @@ const ApiProjects = () => {
             let live = mydata[itens][2].live;
             let linkfrontend = mydata[itens][3].linkfrontend;
             let linkbackend = mydata[itens][4].linkbackend;
-            setproject(type,project,live, linkfrontend,linkbackend);
+            setproject(type, project, live, linkfrontend, linkbackend);
           }
         };
 

@@ -15,7 +15,7 @@ const aboutReducer = (state = "", action) => {
         ...state,
         aboutthree: action.payload.about,
       };
-      case "ABOUTFOUR":
+    case "ABOUTFOUR":
       return {
         ...state,
         aboutfour: action.payload.about,

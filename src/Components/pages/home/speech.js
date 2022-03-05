@@ -19,7 +19,13 @@ const Speech = () => {
         <Container>
           <Fa>
             <IconContext.Provider
-              value={{ color: "white", size: "17.5px", margin: "0px",padding:"0px",float:"right" }}
+              value={{
+                color: "white",
+                size: "17.5px",
+                margin: "0px",
+                padding: "0px",
+                float: "right",
+              }}
             >
               <div>
                 <GoQuote />
@@ -27,13 +33,13 @@ const Speech = () => {
             </IconContext.Provider>
           </Fa>
           <Text>
-          {speechReducer.map((itemlist, itemlistindex) => (
-            <div key={itemlistindex}>
-              {" "}             
-               <div>{itemlist.speech}</div>
-                <br />              
-            </div>
-          ))}
+            {speechReducer.map((itemlist, itemlistindex) => (
+              <div key={itemlistindex}>
+                {" "}
+                <div>{itemlist.speech}</div>
+                <br />
+              </div>
+            ))}
           </Text>
           <Signature>Geras</Signature>
           <ContainerColor></ContainerColor>
@@ -71,8 +77,16 @@ const Container = styled.div`
     height: 260px;
     display: block;
     margin: auto;
-    margin-top:2.5%;
-    clip-path: polygon(38% 0, 38% 13%, 100% 13%, 100% 100%, 0 100%, 0 13%, 31% 13%);
+    margin-top: 2.5%;
+    clip-path: polygon(
+      38% 0,
+      38% 13%,
+      100% 13%,
+      100% 100%,
+      0 100%,
+      0 13%,
+      31% 13%
+    );
   }
 
   @media screen and (max-width: 450px) {
@@ -87,8 +101,8 @@ const Container = styled.div`
 const ContainerColor = styled.div`
   float: right;
   position: relative;
-  margin:0px;
-  padding:0px;
+  margin: 0px;
+  padding: 0px;
   top: -7.5%;
   width: 2%;
   height: 100%;
@@ -119,17 +133,17 @@ const Fa = styled.div`
 
   @media screen and (max-width: 1250px) {
     left: 10%;
-   }
+  }
 
   @media screen and (max-width: 1000px) {
-    top:17.5%;
+    top: 17.5%;
     left: 5.5%;
-   }
+  }
 
-   @media screen and (max-width: 280px) {
-    top:16%;
+  @media screen and (max-width: 280px) {
+    top: 16%;
     left: 4.5%;
-   }
+  }
 `;
 
 const Text = styled.div`
@@ -157,7 +171,7 @@ const Signature = styled.div`
   position: relative;
   width: 10%;
   text-align: justify;
-  right:-2.5%;
+  right: -2.5%;
   top: 75%;
   font-family: "Great Vibes", cursive;
   font-size: 25px;
@@ -166,23 +180,23 @@ const Signature = styled.div`
   @media screen and (max-width: 1250px) {
     font-size: 22.5px;
     top: 73.5%;
-    right:-3%;
+    right: -3%;
   }
 
   @media screen and (max-width: 1000px) {
     top: 76.5%;
-    right:0.5%;
+    right: 0.5%;
   }
 
   @media screen and (max-width: 420px) {
     top: 78%;
-    right:1%;
+    right: 1%;
   }
 
   @media screen and (max-width: 280px) {
     font-size: 20px;
     top: 83%;
-    right:4%;
+    right: 4%;
   }
 `;
 
