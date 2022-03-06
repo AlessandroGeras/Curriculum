@@ -51,7 +51,7 @@ const Container = styled.div`
   grid-template-columns: auto auto auto;
   align-items: center;  
   text-align:center;
-  margin-left:0;  
+  margin-left:3.5%;  
 
   &.ribbon{grid:none;
     width:100%;
@@ -70,7 +70,7 @@ const Container = styled.div`
       }
 
       @media screen and (max-width: 550px) {
-        width: 93%;
+        width: 90%;
       }
     
       
