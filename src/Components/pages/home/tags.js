@@ -27,17 +27,26 @@ const Tags = () => {
 const Main = styled.div`
   position: absolute;
   left: 0;
-  width: 575px;
+  width: 525px;
 
   /*########## Mobile##########*/
   @media screen and (max-width: 1300px) {
-    width: 470px;
+    width: 425px;
   }
+
   @media screen and (max-width: 1000px) {
     position: static;
     display: block;
     margin: auto;
     width: 100%;
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 94%;
+  }
+
+  @media screen and (max-width: 420px) {
+    width: 84%;
   }
 `;
 
@@ -45,7 +54,8 @@ const Container = styled.div`
   box-sizing:initial;
   width: 200px;
   display: grid;  
-  grid-column-gap: 12.5%;
+  grid-column-gap: 10%;
+  grid-row-gap: 1%;
   grid-template-columns: auto auto auto;
   align-items: center;  
   text-align:center;
@@ -53,7 +63,8 @@ const Container = styled.div`
 
   &.ribbon{grid:none;
     width:100%;
-    margin:0 auto;}
+    margin:0 auto;
+  }
 
   @media screen and (max-width: 1000px) {
     grid-template-columns: auto auto auto auto;
@@ -68,9 +79,9 @@ const Container = styled.div`
 `;
 
 const Tag = styled.h2`
-  padding:2.5px;
+  padding:2.5px 0 2.5px 0;
   margin: -2% 0% 5% 0%;
-  width: 105%;
+  width: 110%;
   font-size: 23px;
 
   &.random0 {
@@ -221,7 +232,7 @@ const Tag = styled.h2`
 
   &.random12 {
     margin-top:-5%;
-    text-shadow: 2px 3px 7px white, 0 5px 1px blue;
+    text-shadow: 2px 3px 7px white, 0 7.5px 1px blue;
     color: red;
   }
 

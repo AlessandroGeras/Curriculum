@@ -16,8 +16,8 @@ const Ribbon = () => {
 
 const Container = styled.p`
   float: left;
-  margin-left: 1.5%;
-  margin-top: 1.5%;
+  margin-top:7%;
+  margin-bottom: 13.5%;
 
   .ribbon {
     position: relative;
@@ -86,7 +86,8 @@ const Container = styled.p`
   }
 
   @media screen and (max-width: 1000px) {
-    float: none;
+    float: none;    
+  margin-bottom:0;
     .text {
       font-size: 13.75px;
     }
