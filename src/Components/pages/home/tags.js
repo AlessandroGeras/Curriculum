@@ -29,11 +29,6 @@ const Main = styled.div`
   left: 0;
   width: 530px;
 
-  /*########## Mobile##########*/
-  @media screen and (max-width: 1300px) {
-    width: 430px;
-  }
-
   @media screen and (max-width: 1000px) {
     position: static;
     display: block;
@@ -69,9 +64,6 @@ const Container = styled.div`
       width:100%;
       }
 
-      @media screen and (max-width: 550px) {
-        width: 90%;
-      }
     
       
 
@@ -247,7 +239,7 @@ const Tag = styled.h2`
   }
 
   /*########## Mobile##########*/
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1000px) {
     font-size: 18px;
   }
 
