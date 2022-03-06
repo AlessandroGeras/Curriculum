@@ -42,6 +42,7 @@ const Main = styled.div`
 `;
 
 const Container = styled.div`
+  box-sizing:initial;
   width: 200px;
   display: grid;  
   grid-column-gap: 12.5%;
@@ -67,9 +68,9 @@ const Container = styled.div`
 `;
 
 const Tag = styled.h2`
+  padding:2.5px;
   margin: -2% 0% 5% 0%;
-  padding: 0 7.5px 5px 7.5px;
-  width: 100%;
+  width: 105%;
   font-size: 23px;
 
   &.random0 {
@@ -219,7 +220,8 @@ const Tag = styled.h2`
   }
 
   &.random12 {
-    text-shadow: 2px 3px 7px white, 0 10px 1px blue;
+    margin-top:-5%;
+    text-shadow: 2px 3px 7px white, 0 5px 1px blue;
     color: red;
   }
 
