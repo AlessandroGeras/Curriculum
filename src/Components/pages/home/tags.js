@@ -27,11 +27,11 @@ const Tags = () => {
 const Main = styled.div`
   position: absolute;
   left: 0;
-  width: 525px;
+  width: 530px;
 
   /*########## Mobile##########*/
   @media screen and (max-width: 1300px) {
-    width: 425px;
+    width: 430px;
   }
 
   @media screen and (max-width: 1000px) {
@@ -40,26 +40,18 @@ const Main = styled.div`
     margin: auto;
     width: 100%;
   }
-
-  @media screen and (max-width: 550px) {
-    width: 94%;
-  }
-
-  @media screen and (max-width: 420px) {
-    width: 84%;
-  }
 `;
 
 const Container = styled.div`
   box-sizing:initial;
   width: 200px;
   display: grid;  
-  grid-column-gap: 10%;
+  grid-column-gap: 15%;
   grid-row-gap: 1%;
   grid-template-columns: auto auto auto;
   align-items: center;  
   text-align:center;
-  margin-left:0;
+  margin-left:0;  
 
   &.ribbon{grid:none;
     width:100%;
@@ -70,16 +62,23 @@ const Container = styled.div`
     grid-template-columns: auto auto auto auto;
     grid-column-gap: 0%;
     width:100%;
-    margin-bottom:5%;
+    margin:0 auto;
 
     @media screen and (max-width: 650px) {
       grid-template-columns: auto auto auto;
       width:100%;
       }
+
+      @media screen and (max-width: 550px) {
+        width: 93%;
+      }
+    
+      
+
 `;
 
 const Tag = styled.h2`
-  padding:2.5px 0 2.5px 0;
+  padding: 2.5px 0 2.5px 0;
   margin: -2% 0% 5% 0%;
   width: 110%;
   font-size: 23px;
@@ -231,7 +230,7 @@ const Tag = styled.h2`
   }
 
   &.random12 {
-    margin-top:-5%;
+    margin-top: -5%;
     text-shadow: 2px 3px 7px white, 0 7.5px 1px blue;
     color: red;
   }
