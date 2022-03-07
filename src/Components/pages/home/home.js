@@ -41,8 +41,13 @@ const BackgroundOne = styled.div`
 
 const BackgroundTwo = styled.div`
   height: 60vh;
-  padding-bottom:26%;
+  padding-bottom:25%;
   background: linear-gradient(110deg, #fdcd3b 65%, #ffed4b 65%);
+
+  /*########## Mobile##########*/
+  @media screen and (max-width: 1050px) and (max-height: 770px) {
+    padding-bottom:37%;
+  }
 
   /*########## Mobile##########*/
   @media screen and (max-width: 1000px) {
