@@ -22,6 +22,7 @@ Início - 21/02/2022 - Conclusão - 04/03/2022 </h3>
     <li><a href="#dia11">Dia 11</a></li>
     <li><a href="#conclusão">Conclusão</a></li>
     <li><a href="#tecnologias">Dependências e Tecnologias usadas</a></li>
+    <li><a href="#link">Projeto online</a></li>
   </ol>
 </details>
 <h2 name="projeto"> Sobre o projeto  </h2>
@@ -101,6 +102,10 @@ Axios<br />
 <br />
 #ReactJS
 <p align="right">(<a href="#indice">voltar ao indice</a>)</p>
+
+<h2 name="link">Projeto online</h2>
+https://alessandrogeras.github.io/Curriculum/
+
 
 
 # Getting Started with Create React App
