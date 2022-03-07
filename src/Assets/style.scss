@@ -53,7 +53,8 @@ article {
   &.BOOTSTRAP,
   &.GIT,
   &.TYPESCRIPT,
-  &.HTML {
+  &.HTML,
+  &.MongoDB {
     --c: #{invert(black)};
     filter: invert(1);
   }
