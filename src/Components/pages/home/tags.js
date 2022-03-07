@@ -73,7 +73,7 @@ const Tag = styled.h2`
   padding: 2.5px 0 2.5px 0;
   margin: -2% 0% 5% 0%;
   width: 110%;
-  font-size: 23px;
+  font-size: 20px;
 
   &.random0 {
     background: #555e25;
@@ -243,16 +243,16 @@ const Tag = styled.h2`
     font-size: 18px;
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 550px) {
     font-size: 15px;
   }
 
-  @media screen and (max-width: 380px) {
+  @media screen and (max-width: 420px) {
     font-size: 11.75px;
   }
 
   @media screen and (max-width: 280px) {
-    font-size: 10px;
+    font-size: 9.5px;
   }
 `;
 
