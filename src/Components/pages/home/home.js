@@ -45,21 +45,16 @@ const BackgroundTwo = styled.div`
   background: linear-gradient(110deg, #fdcd3b 65%, #ffed4b 65%);
 
   /*########## Mobile##########*/
-  @media screen and (max-width: 1050px) and (max-height: 770px) {
-    padding-bottom:37%;
-  }
-
-  /*########## Mobile##########*/
   @media screen and (max-width: 1000px) {
     display: none;
   }
 
   @media screen and (max-height: 800px) {
-    height: 40vh;
+    height: 45vh;
   }
 
   @media screen and (max-height: 600px) {
-    height: 60vh;
+    height: 70vh;
   }
 `;
 
