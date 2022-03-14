@@ -41,6 +41,7 @@ const Skills = () => {
                   </div>
                 )}
 
+              {projectitemlist.linkfrontend !== "null" && (
                 <div>
                   <h5>
                     Frontend Files:{" "}
@@ -49,6 +50,7 @@ const Skills = () => {
                     </a>
                   </h5>
                 </div>
+                 )}
 
                 {projectitemlist.linkbackend !== "null" && (
                   <div>
