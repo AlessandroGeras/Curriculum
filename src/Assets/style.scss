@@ -54,7 +54,7 @@ article {
   &.GIT,
   &.TYPESCRIPT,
   &.HTML,
-  &.MongoDB
+  &.MongoDB,
   &.DOCKER
   {
     --c: #{invert(black)};
