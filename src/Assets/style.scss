@@ -55,7 +55,8 @@ article {
   &.TYPESCRIPT,
   &.HTML,
   &.MongoDB,
-  &.DOCKER
+  &.DOCKER,
+  &.AWS
   {
     --c: #{invert(black)};
     filter: invert(1);
