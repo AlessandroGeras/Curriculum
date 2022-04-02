@@ -58,7 +58,8 @@ article {
   &.HTML,
   &.MongoDB,
   &.DOCKER,
-  &.AWS
+  &.AWS,
+  &.DESENVOLVIMENTO
   {
     --c: #{invert(black)};
     filter: invert(1);
