@@ -59,15 +59,19 @@ article {
   &.MongoDB,
   &.DOCKER,
   &.AWS,
-  &.DESENVOLVIMENTO,
-  &.MICROSOFT
+  &.DESENVOLVIMENTO
   {
     --c: #{invert(black)};
     filter: invert(1);
   }
 
-  &.LÓGICA {
+  &.MICROSOFT {
     --c: #{invert(#455ede)};
+    filter: invert(1);
+  }
+
+  &.LÓGICA {
+    --c: #{invert(#e55300)};
     filter: invert(1);
   }
 
