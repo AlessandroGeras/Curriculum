@@ -110,6 +110,7 @@ const Ribbon = styled.div`
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
   line-height: 1.5em;
   color: #292929;
+  box-sizing: initial;
 
   h2,
   h4 {
