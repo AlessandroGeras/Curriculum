@@ -55,7 +55,6 @@ article {
   &.BOOTSTRAP,
   &.GIT,
   &.TYPESCRIPT,
-  &.HTML,
   &.MongoDB,
   &.DOCKER,
   &.AWS,
@@ -97,6 +96,12 @@ article {
 
   &.SQL {
     --c: #{invert(rgb(15, 130, 0))};
+    filter: invert(1);
+  }
+
+  
+  &.HTML  {
+    --c: #{invert(#DA70D6)};
     filter: invert(1);
   }
 
