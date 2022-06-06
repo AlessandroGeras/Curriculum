@@ -5,9 +5,9 @@ const Ribbon = () => {
     <div>
       <Container>
         <span className="text">
-          <strong className="bold">Randomizador de Skins</strong> <br />
-          Por diversão criei um randomizador de skins. <br /> Atualize a tela
-          para ver os resultados.
+          Colaborador do projeto open source <br/>
+          <strong className="bold">O Bom Professor <br />Gestão do Ensino com Excelência</strong> <br />
+          <a href="https://www.youtube.com/watch?v=Gp7ntL1encQ" target="_blank">Mais informações</a>
         </span>
       </Container>
     </div>
@@ -16,7 +16,7 @@ const Ribbon = () => {
 
 const Container = styled.p`
   float: left;
-  margin-top:7%;
+  margin-top:10%;
   margin-bottom: 13.5%;
 
   .ribbon {
@@ -28,7 +28,6 @@ const Container = styled.p`
   .text {
     display: inline-block;
     padding: 0.5em 1em;
-    min-width: 21em;
     line-height: 1.2em;
     background: #ffd72a;
     position: relative;
@@ -96,12 +95,6 @@ const Container = styled.p`
   @media screen and (max-width: 390px) {
     .text {
       font-size: 12px;
-    }
-  }
-
-  @media screen and (max-width: 280px) {
-    .text {
-      min-width: 19em;
     }
   }
 `;

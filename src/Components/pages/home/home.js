@@ -24,12 +24,12 @@ const section = () => {
 };
 
 const BackgroundOne = styled.div`
-  height: 60vh;
+  height: 65vh;
   background: linear-gradient(110deg, #fdcd3b 65%, #ffed4b 65%);
 
   /*########## Mobile##########*/
   @media screen and (max-width: 1000px) {
-    height: 100%;
+    height: 1%;
     padding-bottom: 7.5%;
     background-image: linear-gradient(to bottom, #fdcd3b, #ffed4b);
   }
@@ -40,7 +40,7 @@ const BackgroundOne = styled.div`
 `;
 
 const BackgroundTwo = styled.div`
-  height: 60vh;
+  height: 65vh;
   padding-bottom:25%;
   background: linear-gradient(110deg, #fdcd3b 65%, #ffed4b 65%);
 
