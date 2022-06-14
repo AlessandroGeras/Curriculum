@@ -57,7 +57,6 @@ article {
   &.VISUAL,
   &.BOOTSTRAP,
   &.GIT,
-  &.TYPESCRIPT,
   &.MongoDB,
   &.DOCKER,
   &.AWS,
@@ -73,7 +72,7 @@ article {
   }
 
   &.LÓGICA {
-    --c: #{invert(#e55300)};
+    --c: #{invert(#c23629)};
     filter: invert(1);
   }
 
@@ -104,7 +103,12 @@ article {
 
   
   &.HTML  {
-    --c: #{invert(#DA70D6)};
+    --c: #{invert(#cc9900 )};
+    filter: invert(1);
+  }
+
+  &.TYPESCRIPT {
+    --c: #{invert(#e55300)};
     filter: invert(1);
   }
 
