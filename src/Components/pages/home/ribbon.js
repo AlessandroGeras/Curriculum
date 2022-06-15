@@ -91,6 +91,10 @@ const Container = styled.p`
       font-size: 13.75px;
     }
   }
+  
+  @media screen and (max-width: 415px) {
+    margin-right:-7.5%;
+  }
 
   @media screen and (max-width: 390px) {
     .text {

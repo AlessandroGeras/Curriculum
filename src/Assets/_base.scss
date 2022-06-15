@@ -60,7 +60,8 @@ article {
   &.MongoDB,
   &.DOCKER,
   &.AWS,
-  &.DESENVOLVIMENTO
+  &.DESENVOLVIMENTO,
+  &.PostgreSQL
   {
     --c: #{invert(black)};
     filter: invert(1);

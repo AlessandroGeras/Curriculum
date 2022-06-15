@@ -24,7 +24,7 @@ const section = () => {
 };
 
 const BackgroundOne = styled.div`
-  height: 65vh;
+  height: 70vh;
   background: linear-gradient(110deg, #fdcd3b 65%, #ffed4b 65%);
 
   /*########## Mobile##########*/
@@ -40,7 +40,7 @@ const BackgroundOne = styled.div`
 `;
 
 const BackgroundTwo = styled.div`
-  height: 65vh;
+  height: 70vh;
   padding-bottom:25%;
   background: linear-gradient(110deg, #fdcd3b 65%, #ffed4b 65%);
 

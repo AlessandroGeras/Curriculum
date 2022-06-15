@@ -35,6 +35,10 @@ const Main = styled.div`
     margin: auto;
     width: 100%;
   }
+
+  @media screen and (max-width: 415px) {
+   margin-left: -2.5%;
+  }
 `;
 
 const Container = styled.div`
