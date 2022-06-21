@@ -265,7 +265,7 @@ const Certifications = styled.div`
 const Bootcamps = styled.div`
   margin-top: 5%;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
 `;
 
 export default Skills;
