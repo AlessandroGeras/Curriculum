@@ -244,7 +244,7 @@ const Tag = styled.h2`
 
   /*########## Mobile##########*/
   @media screen and (max-width: 1000px) {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   @media screen and (max-width: 550px) {
