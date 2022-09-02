@@ -266,6 +266,23 @@ const Bootcamps = styled.div`
   margin-top: 5%;
   display: grid;
   grid-template-columns: auto auto auto auto;
+
+  /*########## Mobile##########*/
+  @media screen and (max-width: 1300px) {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: auto auto auto;
+  }
+
+  @media screen and (max-width: 750px) {
+    grid-template-columns: auto auto;
+  }
+
+  @media screen and (max-width: 500px) {
+    grid-template-columns: auto;
+  }
 `;
 
 export default Skills;
