@@ -113,6 +113,12 @@ article {
     filter: invert(1);
   }
 
+  &.BANCO {
+    --c: #{invert(      
+      #770060   )};
+    filter: invert(1);
+  }
+
   &::before {
     position: absolute;
     top: 0;
